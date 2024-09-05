@@ -1,0 +1,72 @@
+.mynav-text{
+    font-size: 1.50rem;
+}
+.montserrat-mainFont {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+.mycolor-bg {
+    background-color:rgb(0, 120, 212)
+}
+html, body {
+    height: 100%;
+    margin: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    padding: 0.625rem 0;
+}
+
+
+.main-mypadding{
+    padding-top: 2.688rem;
+    padding-right: 5.375rem;
+    padding-left: 5.375rem;
+    padding-bottom: 2rem;
+}
+.myheader {
+    padding-top: 2.688rem;
+    padding-right: 5.375rem;
+    padding-left: 5.375rem;
+    padding-bottom: 2rem;
+
+}
+.mynav-padding {
+    padding-top: 0px;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 0px;
+    border-radius: 1.15rem;
+}
+.mybtn {
+    color: rgb(40, 112, 237);
+}
+/* container p-5 my-5 mynav-bg text-white STARI CONTAINER*/
+.mygrid-container {        
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 15rem 15rem 15rem; /*Make the grid smaller than the container*/
+    gap: 1rem;
+    background-color: #2196F3;
+    padding: 1.25rem ;
+    border-radius: 1.15rem;
+  }
+  
+.mygrid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 1.25rem 0;
+    font-size: 1.25rem;
+}

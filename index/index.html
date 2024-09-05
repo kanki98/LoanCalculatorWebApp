@@ -11,26 +11,26 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
         crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="index.css"> 
     <title>Kalkulator kredita</title>
 </head>
 <body class="montserrat-mainFont">
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-dark montserrat-mainFont mynav-bg mx-auto py-3 ">
+    <header class="myheader ">
+        <nav class="navbar navbar-expand-sm navbar-dark montserrat-mainFont mycolor-bg mynav-padding mx-auto py-3 ">
             <div class="container-fluid">
             <a class="navbar-brand" href="#"><img src="images/loan-vector-icon.jpg" alt="Logo" width="100" height="auto"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav mynav-text">
                 <li class="nav-item">
                     <a class="nav-link active" href="index.html">Stambeni kredit</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item mynav-text">
                     <a class="nav-link" href="#">Gotovinski kredit</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item mynav-text">
                     <a class="nav-link" href="#">Link TODO</a>
                 </li>
                 </ul>
@@ -39,14 +39,28 @@
         </nav>
     </header>
 
-    <main>
+    <main class="main-mypadding">
         <h1>Kalkulator stambenog kredita</h1>
-        <p>To Do - iznos kredita unos/picker</p>
-        <p>To Do - rok otplate kredita unos/picker</p>
-        <p>Izračunati anuiteti, kamate, svi iznosi</p>
-        <p>Button - oplatni plan koji će se otvorit na novom screen-u</p>
+        <div class="mygrid-container"> 
+            <div class="row">
+                <div class="col">
+                    To Do - iznos kredita unos/picker
+                </div>
+                
+                <div class="col">
+                    To Do - rok otplate kredita unos/picker
+                </div>
+            </div>
+            <div class="col">
+                Izračunati anuiteti, kamate, svi iznosi
+            </div>
+            <div class="col">
+                <button class="mybtn" href="#">Otvorite otplatni plan</button>
+            </div>
+         
+        </div>
     </main>   
-    <footer class="bg-dark text-white text-center py-4 montserrat-mainFont">
+    <footer class="mycolor-bg text-white text-center py-4 montserrat-mainFont">
         <div class="container">
             <p>&copy; 2024 Karlo Kranjčec, FERIT. Za potrebe završnog rada.</p>
             <ul class="list-inline">
