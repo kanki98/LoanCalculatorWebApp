@@ -2,6 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
@@ -11,7 +12,12 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
         crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/index.css"> 
+    <link rel="stylesheet" href="css/myRangeSlider.css">
+
+    <script src="JS/index.js" defer></script>
+
     <title>Kalkulator kredita</title>
 </head>
 <body class="montserrat-mainFont">
@@ -28,10 +34,10 @@
                     <a class="nav-link active" href="index.html">Stambeni kredit</a>
                 </li>
                 <li class="nav-item mynav-text">
-                    <a class="nav-link" href="#">Gotovinski kredit</a>
+                    <a class="nav-link" href="#">Otplatni plan</a>
                 </li>
                 <li class="nav-item mynav-text">
-                    <a class="nav-link" href="#">Link TODO</a>
+                    <a class="nav-link" href="#">Gotovinski kredit</a>
                 </li>
                 </ul>
             </div>
@@ -41,20 +47,33 @@
 
     <main class="main-mypadding">
         <h1>Kalkulator stambenog kredita</h1>
-        <div class="mygrid-container"> 
-            <div class="row">
-                <div class="col">
-                    To Do - iznos kredita unos/picker
-                </div>
-                
-                <div class="col">
-                    To Do - rok otplate kredita unos/picker
-                </div>
+        <div class="mygrid-container row"> 
+            <div class="column">
+                <div class="slidecontainer">
+                    <h3>Odaberite iznos</h3>
+                    <input type="range" step="1000" min="10000" max="500000" value="250000" class="slider" id="myRange1">
+                    <div class="slider-values">
+                        <span id="minValue"></span>
+                        <span id="myRange1Output"></span>
+                        <span id="maxValue"></span>
+                      </div>
+                  </div>
+                <br>
+                <br>
+                  <div class="slidecontainer">
+                    <h3>Odaberite rok otplate</h3>
+                    <input type="range" step="1" min="13" max="360" value="180" class="slider" id="myRange2">
+                    <div class="slider-values">
+                        <span id="minValueMonth"></span>
+                        <span id="myRange2Output"></span>
+                        <span id="maxValueMonth"></span>
+                      </div>
+                  </div>
             </div>
-            <div class="col">
-                Izračunati anuiteti, kamate, svi iznosi
+            <div class="column">
+                <h2>Izračunati anuiteti, kamate, svi iznosi</h2>
             </div>
-            <div class="col">
+            <div class="column">
                 <button class="mybtn" href="#">Otvorite otplatni plan</button>
             </div>
          
@@ -62,7 +81,7 @@
     </main>   
     <footer class="mycolor-bg text-white text-center py-4 montserrat-mainFont">
         <div class="container">
-            <p>&copy; 2024 Karlo Kranjčec, FERIT. Za potrebe završnog rada.</p>
+            <p>&copy; 2024 Karlo Kranjčec, FERIT. Ova stranica je izrađena za potrebe završnog rada.</p>
             <ul class="list-inline">
                 <li class="list-inline-item"><a href="#" class="text-white">Zasad tu</a></li>
                 <li class="list-inline-item"><a href="#" class="text-white">Nema ništa</a></li>
@@ -70,5 +89,15 @@
             </ul>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            initializeMoneySlider("myRange1", "myRange1Output", "minValue", "maxValue");
+        });
+        document.addEventListener("DOMContentLoaded", function() {
+            initializeMonthSlider("myRange2", "myRange2Output", "minValueMonth", "maxValueMonth");
+        });
+    </script>
+
 </body>
 </html>
