@@ -13,12 +13,9 @@
         crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/index.css"> 
-    <link rel="stylesheet" href="css/myRangeSlider.css">
+    <link rel="stylesheet" href="css/otplatni.css"> 
 
-    <script src="JS/sliders.js" defer></script>
-
-    <title>Kalkulator kredita</title>
+    <title>Otplatni plan</title>
 </head>
 <body class="montserrat-mainFont">
     <header class="myheader ">
@@ -31,13 +28,13 @@
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav mynav-text">
                 <li class="nav-item">
-                    <a class="nav-link active" href="index.html">Stambeni kredit</a>
-                </li>
-                <li class="nav-item mynav-text">
-                    <a class="nav-link" href="otplatni.html">Otplatni plan</a>
+                    <a class="nav-link active" href="otplatni.html">Otplatni plan</a>
                 </li>
                 <li class="nav-item mynav-text">
                     <a class="nav-link" href="gotovinski.html">Gotovinski kredit</a>
+                </li>
+                <li class="nav-item mynav-text">
+                    <a class="nav-link" href="index.html">Stambeni kredit</a>
                 </li>
                 </ul>
             </div>
@@ -46,37 +43,16 @@
     </header>
 
     <main class="main-mypadding">
-        <h1>Kalkulator stambenog kredita</h1>
+        <h1>Otplatni plan</h1>
         <div class="mygrid-container row"> 
             <div class="column">
-                <div class="slidecontainer">
-                    <h3>Odaberite iznos</h3>
-                    <input type="range" step="1000" min="10000" max="500000" value="250000" class="slider" id="myRange1">
-                    <div class="slider-values">
-                        <span id="minValue"></span>
-                        <strong><span id="myRange1Output"></span></strong>
-                        <span id="maxValue"></span>
-                      </div>
-                  </div>
-                <br>
-                <br>
-                  <div class="slidecontainer">
-                    <h3>Odaberite rok otplate</h3>
-                    <input type="range" step="1" min="13" max="360" value="180" class="slider" id="myRange2">
-                    <div class="slider-values">
-                        <span id="minValueMonth"></span>
-                        <strong><span id="myRange2Output"></span></strong>
-                        <span id="maxValueMonth"></span>
-                      </div>
-                  </div>
-                  <br>
+                <h2>Napravit columne jedan do drugog</h2>
             </div>
             <div class="column">
-                <h2>Izračunati anuiteti, kamate, svi iznosi</h2>
-                <p>TODO - JS za izračun svih stavki </p>
+                <h2>Koji ce se prikazat jedan do drugog po cijelom ekranu</h2>
             </div>
             <div class="column">
-                <button class="mybtn" href="otplatni.html">Otvorite otplatni plan</button>
+                <h2>Ovdje ce isto to bit</h2>
             </div>
          
         </div>
@@ -91,15 +67,5 @@
             </ul>
         </div>
     </footer>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            initializeMoneySlider("myRange1", "myRange1Output", "minValue", "maxValue");
-        });
-        document.addEventListener("DOMContentLoaded", function() {
-            initializeMonthSlider("myRange2", "myRange2Output", "minValueMonth", "maxValueMonth");
-        });
-    </script>
-
 </body>
 </html>

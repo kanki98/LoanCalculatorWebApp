@@ -78,10 +78,10 @@ footer {
   /* Container for flexboxes */
   .row {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: nowrap; /*nowrap means that the items will be in the form of | | |*/
   }
   
-  /* Create four equal columns */
+  /* Create three equal columns */
   .column {
     flex: 33%;
     padding: 1.25rem;
