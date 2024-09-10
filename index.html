@@ -26,23 +26,23 @@
     <header class="myheader ">
         <nav class="navbar navbar-expand-sm navbar-dark montserrat-mainFont mycolor-bg mynav-padding mx-auto py-3 ">
             <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="images/loan-vector-icon.jpg" alt="Logo" width="100" height="auto"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav mynav-text">
-                <li class="nav-item">
-                    <a class="nav-link active" href="index.html"><i class="fa fa-home nav-i"></i>Stambeni kredit</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="otplatni.html"><i class="fa fa-pencil-square-o nav-i "></i>Otplatni plan</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="gotovinski.html"><i class="fa fa-money nav-i"></i>Gotovinski kredit</a>
-                </li>
-                </ul>
-            </div>
+                <a class="navbar-brand" href="#"><img src="images/loan-vector-icon.jpg" alt="Logo" width="100" height="auto"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav mynav-text">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html"><i class="fa fa-home nav-i"></i>Stambeni kredit</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="otplatni.html"><i class="fa fa-pencil-square-o nav-i "></i>Otplatni plan</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gotovinski.html"><i class="fa fa-money nav-i"></i>Gotovinski kredit</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
@@ -59,6 +59,7 @@
                         <strong><span id="myRange1Output" class="width50"></span></strong>
                         <span id="maxValue" class="width25"></span>
                       </div>
+                      <input class="width50" type="number" id="numberInput" min="10000" max="500000" step="1000" value="250000">
                   </div>
                 <br>
                 <br>
@@ -70,15 +71,26 @@
                         <strong><span id="myRange2Output" class="width50"></span></strong>
                         <span id="maxValueMonth" class="width25"></span>
                       </div>
+                      <input class="width50" type="number" id="numberInputMonth" min="13" max="360" step="1" value="180">
                   </div>
                   <br>
             </div>
             <div class="column">
-                <h2>Izračunati anuiteti, kamate, svi iznosi</h2>
-                <p>TODO - JS za izračun svih stavki </p>
+                <h3 style="padding-top: 1rem; padding-bottom: 1rem;">Stambeni kredit</h3>
+                <p class="anuitet">Iznos mjesečnog anuiteta: </p>
+                <p>Ukupni iznos otplate: </p>
+                <p>Ukupni iznos kamate: </p>
+                <p>Kamatna stopa: </p>
+                <p>Efektivna kamatna stopa: </p>
+                <p>Vrsta kamatne stope: </p>
             </div>
             <div class="column">
-                <button class="mybtn" href="otplatni.html">Otvorite otplatni plan</button>
+                <h3>Informacije o kreditu</h3>
+                <button class="mybtn" href="otplatni.html"><i class="fa fa-pencil-square-o btn-i"></i>Otvorite otplatni plan</button>
+                <div class="my-border"></div>
+                <h4 style="padding-top: 1rem; padding-bottom: 1rem;">Stambeni kredit</h4>
+                <p class="medium-font">Kamatna stopa: 4,10 %</p>
+                <p class="medium-font">Vrsta kamatne stope: fiksna</p>
             </div>
          
         </div>
@@ -96,10 +108,10 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            initializeMoneySlider("myRange1", "myRange1Output", "minValue", "maxValue");
+            initializeMoneySlider("myRange1", "myRange1Output", "minValue", "maxValue", "numberInput");
         });
         document.addEventListener("DOMContentLoaded", function() {
-            initializeMonthSlider("myRange2", "myRange2Output", "minValueMonth", "maxValueMonth");
+            initializeMonthSlider("myRange2", "myRange2Output", "minValueMonth", "maxValueMonth", "numberInputMonth");
         });
     </script>
 
