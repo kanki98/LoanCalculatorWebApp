@@ -1,6 +1,10 @@
 .mynav-text{
     font-size: 1.50rem;
 }
+.nav-i {
+    padding-right: 0.6rem;
+    padding-left: 1.25rem;
+}
 .montserrat-mainFont {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
