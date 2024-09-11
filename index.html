@@ -36,7 +36,7 @@
                             <a class="nav-link active" href="index.html"><i class="fa fa-home nav-i"></i>Stambeni kredit</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="otplatni.html"><i class="fa fa-pencil-square-o nav-i "></i>Otplatni plan</a>
+                            <a class="nav-link" href="otplatni.html"><i class="fa fa-table nav-i "></i>Otplatni plan</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="gotovinski.html"><i class="fa fa-money nav-i"></i>Gotovinski kredit</a>
@@ -50,31 +50,35 @@
     <main class="main-mypadding">
         <h1>Kalkulator stambenog kredita</h1>
         <div class="mygrid-container row"> 
-            <div class="column">
-                <div class="slidecontainer">
-                    <h3>Odaberite iznos</h3>
-                    <input type="range" step="1000" min="10000" max="500000" value="250000" class="slider" id="myRange1">
-                    <div class="slider-values">
-                        <span id="minValue" class="width25"></span>
-                        <strong><span id="myRange1Output" class="width50"></span></strong>
-                        <span id="maxValue" class="width25"></span>
+            <form id="stambeniForm" class="column my-form">
+                <div class="column">
+                    <div class="slidecontainer">
+                        <h3>Odaberite iznos</h3>
+                        <input type="range" step="1000" min="10000" max="500000" value="250000" class="slider" id="myRange1">
+                        <div class="slider-values">
+                            <span id="minValue" class="width25"></span>
+                            <strong><span id="myRange1Output" class="width50"></span></strong>
+                            <span id="maxValue" class="width25"></span>
+                          </div>
+                          <input class="width50" type="number" id="numberInput" min="10000" max="500000" step="1000" value="250000">
                       </div>
-                      <input class="width50" type="number" id="numberInput" min="10000" max="500000" step="1000" value="250000">
-                  </div>
-                <br>
-                <br>
-                  <div class="slidecontainer">
-                    <h3>Odaberite rok otplate</h3>
-                    <input type="range" step="1" min="13" max="360" value="180" class="slider" id="myRange2">
-                    <div class="slider-values">
-                        <span id="minValueMonth" class="width25"></span>
-                        <strong><span id="myRange2Output" class="width50"></span></strong>
-                        <span id="maxValueMonth" class="width25"></span>
+                    <br>
+                    <br>
+                      <div class="slidecontainer">
+                        <h3>Odaberite rok otplate</h3>
+                        <input type="range" step="1" min="13" max="360" value="180" class="slider" id="myRange2">
+                        <div class="slider-values">
+                            <span id="minValueMonth" class="width25"></span>
+                            <strong><span id="myRange2Output" class="width50"></span></strong>
+                            <span id="maxValueMonth" class="width25"></span>
+                          </div>
+                          <input class="width50" type="number" id="numberInputMonth" min="13" max="360" step="1" value="180">
                       </div>
-                      <input class="width50" type="number" id="numberInputMonth" min="13" max="360" step="1" value="180">
-                  </div>
-                  <br>
-            </div>
+                      <br>
+                </div>
+                <button class="mybtn" type="submit"><i class="fa fa-pencil-square-o btn-i"></i>Izračunaj</button>
+                <br>
+            </form>
             <div class="column">
                 <h3 style="padding-top: 1rem; padding-bottom: 1rem;">Stambeni kredit</h3>
                 <p class="anuitet">Iznos mjesečnog anuiteta: </p>
@@ -86,7 +90,7 @@
             </div>
             <div class="column">
                 <h3>Informacije o kreditu</h3>
-                <button class="mybtn" href="otplatni.html"><i class="fa fa-pencil-square-o btn-i"></i>Otvorite otplatni plan</button>
+                <button class="mybtn" href="otplatni.html"><i class="fa fa-table btn-i"></i>Otvorite otplatni plan</button>
                 <div class="my-border"></div>
                 <h4 style="padding-top: 1rem; padding-bottom: 1rem;">Stambeni kredit</h4>
                 <p class="medium-font">Kamatna stopa: 4,10 %</p>
