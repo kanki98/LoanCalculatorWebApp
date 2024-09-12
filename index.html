@@ -60,7 +60,7 @@
                             <strong><span id="myRange1Output" class="width50"></span></strong>
                             <span id="maxValue" class="width25"></span>
                           </div>
-                          <input class="width50" type="number" id="numberInput" min="10000" max="500000" step="1000" value="250000">
+                          <input class="width50" type="number" id="numberInput1" min="10000" max="500000" step="1000" value="250000">
                       </div>
                     <br>
                     <br>
@@ -72,7 +72,7 @@
                             <strong><span id="myRange2Output" class="width50"></span></strong>
                             <span id="maxValueMonth" class="width25"></span>
                           </div>
-                          <input class="width50" type="number" id="numberInputMonth" min="13" max="360" step="1" value="180">
+                          <input class="width50" type="number" id="numberInputMonth2" min="13" max="360" step="1" value="180">
                       </div>
                       <br>
                 </div>
@@ -112,10 +112,10 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            initializeMoneySlider("myRange1", "myRange1Output", "minValue", "maxValue", "numberInput");
+            initializeMoneySlider("myRange1", "myRange1Output", "minValue", "maxValue", "numberInput1");
         });
         document.addEventListener("DOMContentLoaded", function() {
-            initializeMonthSlider("myRange2", "myRange2Output", "minValueMonth", "maxValueMonth", "numberInputMonth");
+            initializeMonthSlider("myRange2", "myRange2Output", "minValueMonth", "maxValueMonth", "numberInputMonth2");
         });
     </script>
 
