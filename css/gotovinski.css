@@ -176,3 +176,23 @@ footer {
         padding-bottom: 0.20rem;
     }
   }
+
+  @media screen and (max-width: 600px) {
+    .row {
+      flex-direction: column;
+    }
+    .myheader {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.20rem;
+    }
+    .main-mypadding {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.20rem;
+    }
+    
+  }
+
