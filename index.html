@@ -15,8 +15,10 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="css/index.css"> 
+    <link rel="stylesheet" href="css/basicStructure.css">
+    <link rel="stylesheet" href="css/customStructure.css"> 
     <link rel="stylesheet" href="css/myRangeSlider.css">
+    <link rel="stylesheet" href="css/media-queries.css">
 
     <script src="JS/sliders.js" defer></script>
 
@@ -60,7 +62,8 @@
                             <strong><span id="myRange1Output" class="width50"></span></strong>
                             <span id="maxValue" class="width25"></span>
                           </div>
-                          <input class="width50" type="number" id="numberInput1" min="10000" max="500000" step="1000" value="250000">
+                          <input class="width50 my-input-field" type="number" id="numberInput1" minlength="5" maxlength="6"
+                          min="10000" max="500000" step="1000" value="250000">
                       </div>
                     <br>
                     <br>
@@ -72,7 +75,8 @@
                             <strong><span id="myRange2Output" class="width50"></span></strong>
                             <span id="maxValueMonth" class="width25"></span>
                           </div>
-                          <input class="width50" type="number" id="numberInputMonth2" min="13" max="360" step="1" value="180">
+                          <input class="width50 my-input-field" type="number" id="numberInputMonth2" minlength="2" maxlength="3"
+                          min="13" max="360" step="1" value="180">
                       </div>
                       <br>
                 </div>

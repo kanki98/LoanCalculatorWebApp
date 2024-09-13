@@ -15,9 +15,10 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="css/gotovinski.css"> 
+    <link rel="stylesheet" href="css/basicStructure.css">
+    <link rel="stylesheet" href="css/customStructure.css"> 
     <link rel="stylesheet" href="css/myRangeSlider.css">
-
+    <link rel="stylesheet" href="css/media-queries.css">
     <script src="JS/sliders.js" defer></script>
 
     <title>Kalkulator kredita</title>
@@ -60,7 +61,8 @@
                             <strong><span id="myRange3Output" class="width50"></span></strong>
                             <span id="maxValue" class="width25"></span>
                           </div>
-                          <input class="width50" type="number" id="numberInput3" min="10000" max="500000" step="1000" value="250000">
+                          <input class="width50 my-input-field" type="number" id="numberInput3" minlength="5" maxlength="6"
+                          min="10000" max="500000" step="1000" value="250000">
                       </div>
                     <br>
                     <br>
@@ -72,7 +74,8 @@
                             <strong><span id="myRange4Output" class="width50"></span></strong>
                             <span id="maxValueMonth" class="width25"></span>
                           </div>
-                          <input class="width50" type="number" id="numberInputMonth4" min="13" max="120" step="1" value="60">
+                          <input class="width50 my-input-field" type="number" id="numberInputMonth4" minlength="2" maxlength="3"
+                          min="13" max="120" step="1" value="60">
                       </div>
                       <br>
                 </div>
