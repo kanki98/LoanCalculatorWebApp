@@ -20,6 +20,9 @@
     .row {
       flex-direction: column;
     }
+    .column {
+      flex: 75%;
+    }
     .myheader {
         padding-left: 1rem;
         padding-right: 1rem;
@@ -40,6 +43,9 @@
     .row {
       flex-direction: column;
     }
+    .column {
+      flex: 75%;
+    }
     .myheader {
         padding-left: 1rem;
         padding-right: 1rem;
@@ -58,6 +64,9 @@
   @media screen and (max-width: 600px) {
     .row {
       flex-direction: column;
+    }
+    .column {
+      flex: 75%;
     }
     .myheader {
         padding-left: 1rem;

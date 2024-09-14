@@ -48,6 +48,7 @@ p.medium-font {
     transition-duration: 0.4s;
     padding: 0.5rem;
     border: 0.03rem solid black;
+    cursor: pointer;
 }
 .mybtn:hover {
     color: black;
@@ -63,5 +64,5 @@ p.medium-font {
     background-color: rgb(75, 210, 219);
     transition-duration: 0.4s;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-
 }
+
