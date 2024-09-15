@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,9 +20,10 @@
     <link rel="stylesheet" href="css/customStructure.css"> 
     <link rel="stylesheet" href="css/myRangeSlider.css">
     <link rel="stylesheet" href="css/media-queries.css">
+    <link rel="stylesheet" href="css/fullScreen.css">
 
     <script src="JS/sliders.js" defer></script>
-
+    <script src="JS/fullscreen_overlay.js"></script>
     <title>Kalkulator kredita</title>
 </head>
 <body class="montserrat-mainFont">
@@ -94,17 +96,22 @@
             </div>
             <div class="column">
                 <h3>Informacije o kreditu</h3>
-                <a href="otplatni.html">
-                    <button class="mybtn">
+                <button class="mybtn" id="myBtn1">
                         <i class="fa fa-table btn-i"></i>Otvorite otplatni plan
-                    </button>
-                </a>
+                </button>
+                <div id="myModal" class="modal">
+                    <!-- Modal content -->
+                    <span class="close">&times;</span>
+                    <div class="modal-content">
+                      <p>Some text in the Modal..</p>
+                      <p>More text in the Modal..</p>
+                    </div>
+                </div>
                 <div class="my-border"></div>
                 <h4 style="padding-top: 1rem; padding-bottom: 1rem;">Stambeni kredit</h4>
                 <p class="medium-font">Kamatna stopa: 4,10 %</p>
                 <p class="medium-font">Vrsta kamatne stope: fiksna</p>
             </div>
-         
         </div>
     </main>   
     <footer class="mycolor-bg text-white text-center py-4 montserrat-mainFont">
@@ -125,7 +132,13 @@
         document.addEventListener("DOMContentLoaded", function() {
             initializeMonthSlider("myRange2", "myRange2Output", "minValueMonth", "maxValueMonth", "numberInputMonth2");
         });
+        document.addEventListener("DOMContentLoaded", function(){
+             modalOperations("myModal", "myBtn1", "close" );
+        });
     </script>
+    
+            
+    
 
 </body>
 </html>

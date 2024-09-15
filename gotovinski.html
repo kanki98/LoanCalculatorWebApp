@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,7 +20,10 @@
     <link rel="stylesheet" href="css/customStructure.css"> 
     <link rel="stylesheet" href="css/myRangeSlider.css">
     <link rel="stylesheet" href="css/media-queries.css">
+    <link rel="stylesheet" href="css/fullScreen.css">
+
     <script src="JS/sliders.js" defer></script>
+    <script src="JS/fullscreen_overlay.js"></script>
 
     <title>Kalkulator kredita</title>
 </head>
@@ -93,11 +97,17 @@
             </div>
             <div class="column">
                 <h3>Informacije o kreditu</h3>
-                <a href="otplatni.html">
-                    <button class="mybtn">
-                        <i class="fa fa-table btn-i"></i>Otvorite otplatni plan
-                    </button>
-                </a>
+                <button class="mybtn" id="myBtn2">
+                    <i class="fa fa-table btn-i"></i>Otvorite otplatni plan
+                </button>
+                <div id="myModal2" class="modal">
+                    <!-- Modal content -->
+                    <span class="close">&times;</span>
+                    <div class="modal-content">
+                      <p>Some text in the Modal..</p>
+                      <p>More text in the Modal..</p>
+                    </div>
+                </div>
                 <div class="my-border"></div>
                 <h4 style="padding-top: 1rem; padding-bottom: 1rem;">Gotovinski kredit</h4>
                 <p class="medium-font">Kamatna stopa: 4,10 %</p>
@@ -123,6 +133,9 @@
         });
         document.addEventListener("DOMContentLoaded", function() {
             initializeMonthSlider("myRange4", "myRange4Output", "minValueMonth", "maxValueMonth", "numberInputMonth4");
+        });
+        document.addEventListener("DOMContentLoaded", function(){
+             modalOperations("myModal2", "myBtn2", "close" );
         });
     </script>
 
