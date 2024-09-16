@@ -1,0 +1,28 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th {
+    color: rgb(40, 112, 237);
+  }
+  td {
+    color: darkblue;
+  }
+  th, td {
+    text-align: left;
+    padding: 8px;
+    font-weight: 600;
+  }
+  tr:nth-child(even) {
+    background-color: #D6EEEE;
+  }
+  th:hover, th:focus {
+    color: darkslateblue;
+    background-color: #2196F3;
+    transition: 0.3s;
+  }
+  td:hover, td:focus {
+    color: black;
+    background-color: #2196F3;
+    transition: 0.3s;
+  }
