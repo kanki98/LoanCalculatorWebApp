@@ -21,11 +21,11 @@
     <link rel="stylesheet" href="css/myRangeSlider.css">
     <link rel="stylesheet" href="css/media-queries.css">
     <link rel="stylesheet" href="css/fullScreen.css">
-
     <link rel="stylesheet" href="css/otplatnaTablica.css">
 
     <script src="JS/sliders.js" defer></script>
     <script src="JS/fullscreen_overlay.js"></script>
+    <script src="JS/showingRates.js"></script>
     <title>Kalkulator kredita</title>
 </head>
 <body class="montserrat-mainFont">
@@ -75,16 +75,21 @@
                     <br>
                       <div class="slidecontainer">
                         <h3>Odaberite rok otplate</h3>
-                        <input type="range" step="1" min="13" max="360" value="180" class="slider" id="myRange2">
+                        <input type="range" step="1" min="36" max="360" value="180" class="slider" id="myRange2">
                         <div class="slider-values">
                             <span id="minValueMonth" class="width25"></span>
                             <strong><span id="myRange2Output" class="width50"></span></strong>
                             <span id="maxValueMonth" class="width25"></span>
                           </div>
                           <input class="width50 my-input-field" type="number" id="numberInputMonth2" minlength="2" maxlength="3"
-                          min="13" max="360" step="1" value="180">
+                          min="36" max="360" step="1" value="180">
                       </div>
                       <br>
+                      <div class="slidecontainer">
+                        <h3>Odaberite kamatnu stopu</h3>
+                        <input type="number" id="rataStambeni-input" class="rStambeni width50 my-input-field" min="1" max="10" value="5">
+                        <strong><span id="rataStambeni-output" class="width50"></span></strong>
+                      </div>
                 </div>
                 <button class="mybtn" type="submit"><i class="fa fa-pencil-square-o btn-i"></i>Izračunaj</button>
                 <br>
@@ -114,7 +119,7 @@
                             <tr>
                                 <th>Period</th>
                                 <th>Datum dospijeća</th>
-                                <th>Otplani obrok</th>
+                                <th>Otplatni obrok</th>
                                 <th>Glavnica</th>
                                 <th>Kamata</th>
                                 <th>Stanje kredita</th>
@@ -332,8 +337,8 @@
                 </div>
                 <div class="my-border"></div>
                 <h4 style="padding-top: 1rem; padding-bottom: 1rem;">Stambeni kredit</h4>
-                <p class="medium-font">Kamatna stopa: 4,10 %</p>
-                <p class="medium-font">Vrsta kamatne stope: fiksna</p>
+                <strong><p id="stambeniKamata-ispis" class="medium-font">Kamatna stopa: %</p></strong>
+                <strong><p class="medium-font">Vrsta kamatne stope: fiksna</p></strong>
             </div>
         </div>
     </main>   
@@ -358,10 +363,9 @@
         document.addEventListener("DOMContentLoaded", function(){
              modalOperations("myModal", "myBtn1", "close" );
         });
+        document.addEventListener("DOMContentLoaded", function() {
+            showRate("rataStambeni-input", "rataStambeni-output", "stambeniKamata-ispis");
+        });
     </script>
-    
-            
-    
-
 </body>
 </html>

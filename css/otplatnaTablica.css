@@ -16,12 +16,7 @@ table {
   tr:nth-child(even) {
     background-color: #D6EEEE;
   }
-  th:hover, th:focus {
-    color: darkslateblue;
-    background-color: #2196F3;
-    transition: 0.3s;
-  }
-  td:hover, td:focus {
+  tr:hover, tr:focus {
     color: black;
     background-color: #2196F3;
     transition: 0.3s;

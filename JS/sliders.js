@@ -20,8 +20,6 @@ function initializeMoneySlider(sliderId, outputId, minId, maxId, numberInputId) 
         output.innerHTML = "Vaš odabir : " + this.value + " €";
     }
 }
-
-
 function initializeMonthSlider(sliderId, outputId, minId, maxId, numberInputId) {
     var slider = document.getElementById(sliderId);
     var output = document.getElementById(outputId);

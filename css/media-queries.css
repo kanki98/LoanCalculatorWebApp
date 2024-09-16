@@ -15,7 +15,6 @@
         padding-bottom: 0.20rem;
     }
   }
-  
   @media screen and (max-width: 1000px) {
     .row {
       flex-direction: column;
@@ -34,9 +33,8 @@
         padding-right: 1rem;
         padding-top: 0.5rem;
         padding-bottom: 0.20rem;
-    }
+    }  
   }
-
   /* On screens that are 768px wide or less, make the columns stack on top of each other instead of next to each other 
   and make paddings of header and main get extremely reduced so the contents arent pushed on each other*/
   @media screen and (max-width: 768px) {
@@ -57,10 +55,8 @@
         padding-right: 1rem;
         padding-top: 0.5rem;
         padding-bottom: 0.20rem;
-    }
-    
+    }   
   }
-
   @media screen and (max-width: 600px) {
     .row {
       flex-direction: column;
@@ -79,6 +75,5 @@
         padding-right: 1rem;
         padding-top: 0.5rem;
         padding-bottom: 0.20rem;
-    }
-    
+    } 
   }

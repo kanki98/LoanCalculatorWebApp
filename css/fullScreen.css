@@ -17,7 +17,8 @@
   .modal-content {
     background-color: rgb(244, 246, 250);
     margin: auto;
-    padding: 20px;
+    padding-left: 1rem;
+    padding-right: 1rem;
     border: 2px solid #2196F3;;
     width: 90%;
     align-items:normal;
@@ -42,7 +43,8 @@
     background-color:rgb(75, 210, 219);
     text-decoration: none;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.5s;
+    rotate: z 90deg;
   }
   .otplatniTitle {
     position: absolute;
