@@ -23,9 +23,6 @@
     <link rel="stylesheet" href="css/fullScreen.css">
     <link rel="stylesheet" href="css/otplatnaTablica.css">
 
-    <script src="JS/sliders.js" defer></script>
-    <script src="JS/fullscreen_overlay.js"></script>
-    <script src="JS/showingRates.js"></script>
     <title>Kalkulator kredita</title>
 </head>
 <body class="montserrat-mainFont">
@@ -96,12 +93,11 @@
             </form>
             <div class="column">
                 <h3 style="padding-top: 1rem; padding-bottom: 1rem;">Stambeni kredit</h3>
-                <p class="anuitet">Iznos mjesečnog anuiteta: </p>
+                <p class="anuitet" id="anuitedStambeni">Iznos mjesečnog anuiteta: </p>
                 <p>Ukupni iznos otplate: </p>
                 <p>Ukupni iznos kamate: </p>
                 <p>Kamatna stopa: </p>
-                <p>Efektivna kamatna stopa: </p>
-                <p>Vrsta kamatne stope: </p>
+                <p>Vrsta kamatne stope: fiksna</p>
             </div>
             <div class="column">
                 <h3>Informacije o kreditu</h3>
@@ -113,7 +109,7 @@
                     <span class="otplatniTitle">Otplatni plan za stambeni kredit</span>
                     <span class="close">&times;</span>
                     <div class="modal-content">
-                        <table class="my-table">
+                        <table class="my-table" id="stambeniKredit-tablica">
                                 <thead>
                                     <tr>
                                         <th>Period</th>
@@ -125,38 +121,6 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td data-label="Period">1</td>
-                                        <td data-label="Datum dospijeća">15.10.2024.</td>
-                                        <td data-label="Otplatni obrok">500,00 €</td>
-                                        <td data-label="Glavnica">300,00 €</td>
-                                        <td data-label="Kamata">200,00 €</td>
-                                        <td data-label="Stanje kredita">69.700,00 €</td>
-                                    </tr>
-                                    <tr>
-                                        <td data-label="Period">2</td>
-                                        <td data-label="Datum dospijeća">15.11.2024.</td>
-                                        <td data-label="Otplatni obrok">500,00 €</td>
-                                        <td data-label="Glavnica">300,00 €</td>
-                                        <td data-label="Kamata">200,00 €</td>
-                                        <td data-label="Stanje kredita">69.400,00 €</td>
-                                    </tr>
-                                    <tr>
-                                        <td data-label="Period">2</td>
-                                        <td data-label="Datum dospijeća">15.11.2024.</td>
-                                        <td data-label="Otplatni obrok">500,00 €</td>
-                                        <td data-label="Glavnica">300,00 €</td>
-                                        <td data-label="Kamata">200,00 €</td>
-                                        <td data-label="Stanje kredita">69.400,00 €</td>
-                                    </tr>
-                                    <tr>
-                                        <td data-label="Period">2</td>
-                                        <td data-label="Datum dospijeća">15.11.2024.</td>
-                                        <td data-label="Otplatni obrok">500,00 €</td>
-                                        <td data-label="Glavnica">300,00 €</td>
-                                        <td data-label="Kamata">200,00 €</td>
-                                        <td data-label="Stanje kredita">69.400,00 €</td>
-                                    </tr>
                                     <!-- Add more rows as needed -->
                                 </tbody>
                             </table>
@@ -179,20 +143,24 @@
             </ul>
         </div>
     </footer>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            initializeMoneySlider("myRange1", "myRange1Output", "minValue", "maxValue", "numberInput1");
-        });
-        document.addEventListener("DOMContentLoaded", function() {
-            initializeMonthSlider("myRange2", "myRange2Output", "minValueMonth", "maxValueMonth", "numberInputMonth2");
-        });
-        document.addEventListener("DOMContentLoaded", function(){
-             modalOperations("myModal", "myBtn1", "close" );
-        });
-        document.addEventListener("DOMContentLoaded", function() {
-            showRate("rataStambeni-input", "rataStambeni-output", "stambeniKamata-ispis");
-        });
-    </script>
 </body>
+<script src="JS/sliders.js" defer></script>
+<script src="JS/fullscreen_overlay.js"></script>
+<script src="JS/showingRates.js"></script>
+<script src="JS/tables.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        initializeMoneySlider("myRange1", "myRange1Output", "minValue", "maxValue", "numberInput1");
+    });
+    document.addEventListener("DOMContentLoaded", function() {
+        initializeMonthSlider("myRange2", "myRange2Output", "minValueMonth", "maxValueMonth", "numberInputMonth2");
+    });
+    document.addEventListener("DOMContentLoaded", function(){
+         modalOperations("myModal", "myBtn1", "close" );
+    });
+    document.addEventListener("DOMContentLoaded", function() {
+        showRate("rataStambeni-input", "rataStambeni-output", "stambeniKamata-ispis");
+    });
+</script>
+
 </html>
