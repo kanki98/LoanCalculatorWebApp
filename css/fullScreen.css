@@ -60,3 +60,23 @@
     color: #2196F3;
     transition: 0.3s;
   }
+  @media (max-width: 1000px) {
+    .otplatniTitle {
+        font-size: xx-large;
+    }
+  }
+  @media (max-width: 768px){
+    .otplatniTitle {
+        font-size: x-large;
+    }
+  }
+  @media (max-width: 600px){
+    .otplatniTitle {
+        font-size: large;
+    }
+  }
+  @media (max-width: 500px){
+    .otplatniTitle {
+        font-size: medium;
+    }
+  }

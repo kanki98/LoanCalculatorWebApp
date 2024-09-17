@@ -21,3 +21,131 @@ table {
     background-color: #2196F3;
     transition: 0.3s;
   }
+
+  @media (max-width: 1000px) {
+    table {
+        font-size: x-large;
+    }
+    .my-table, .my-table tbody, .my-table th, .my-table td, .my-table tr {
+        display: block;
+    }
+    .my-table thead {
+        display: none;
+    }
+    .my-table tr {
+        margin-bottom: 15px;
+    }
+    .my-table tbody {
+        padding-top: 1rem;
+    }
+    .my-table td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .my-table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        flex-basis: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    table {
+        font-size: larger;
+    }
+    .my-table, .my-table tbody, .my-table th, .my-table td, .my-table tr {
+        display: block;
+    }
+    .my-table thead {
+        display: none;
+    }
+    .my-table tr {
+        margin-bottom: 15px;
+    }
+    .my-table tbody {
+        padding-top: 1rem;
+    }
+    .my-table td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .my-table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        flex-basis: 50%;
+    }
+}
+
+@media (max-width: 600px) {
+    table {
+        font-size: large;
+    }
+    .my-table, .my-table tbody, .my-table th, .my-table td, .my-table tr {
+        display: block;
+    }
+    .my-table thead {
+        display: none;
+    }
+    .my-table tr {
+        margin-bottom: 15px;
+    }
+    .my-table tbody {
+        padding-top: 1rem;
+    }
+    .my-table td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .my-table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        flex-basis: 50%;
+    }
+}
+@media (max-width: 480px) {
+    table {
+        font-size: medium;
+    }
+    .my-table, .my-table tbody, .my-table th, .my-table td, .my-table tr {
+        display: block;
+    }
+    .my-table thead {
+        display: none;
+    }
+    .my-table tr {
+        margin-bottom: 15px;
+    }
+    .my-table tbody {
+        padding-top: 1rem;
+    }
+    .my-table td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .my-table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        flex-basis: 50%;
+    }
+}
+  
