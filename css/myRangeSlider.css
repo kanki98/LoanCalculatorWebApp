@@ -49,12 +49,12 @@
   span.width50 {
     width: 50%;
     font-size: large;
-    font-weight: 600;
+    font-weight: 700;
   }
   span.width25 {
     width: 25%;
     font-size: medium;
-    font-weight: 400;
+    font-weight: 600;
   }
   #minValue {
     font-size: medium;

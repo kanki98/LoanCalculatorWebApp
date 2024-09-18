@@ -59,7 +59,7 @@
                             <strong><span id="myRange1Output" class="width50"></span></strong>
                             <span id="maxValue" class="width25"></span>
                           </div>
-                          <input class="width50 my-input-field" type="number" id="numberInput1" minlength="5" maxlength="6"
+                          <input class="width50 my-input-field output" type="number" id="numberInput1" minlength="5" maxlength="6"
                           min="10000" max="500000" step="1000" value="250000">
                       </div>
                     <br>
@@ -72,14 +72,15 @@
                             <strong><span id="myRange2Output" class="width50"></span></strong>
                             <span id="maxValueMonth" class="width25"></span>
                           </div>
-                          <input class="width50 my-input-field" type="number" id="numberInputMonth2" minlength="2" maxlength="3"
+                          <input class="width50 my-input-field output" type="number" id="numberInputMonth2" minlength="2" maxlength="3"
                           min="36" max="360" step="1" value="180">
                       </div>
                       <br>
                       <div class="slidecontainer">
                         <h3 class="my-h3">Odaberite kamatnu stopu</h3>
-                        <input type="number" id="rataStambeni-input" class="rStambeni kamata-input my-input-field" min="1" max="20" step="0.01" value="5">
-                        <strong><span id="rataStambeni-output" class="width50"></span></strong>
+                        <input type="number" id="rataStambeni-input" class="rStambeni kamata-input my-input-field output" minlength="2" maxlength="2"
+                        min="1" max="20" step="0.01" value="5">
+                        <strong><span id="rataStambeni-output" class="width50 output"></span></strong>
                       </div>
                 </div>
                 <button class="mybtn" type="submit"><i class="fa fa-pencil-square-o btn-i"></i><strong>Izračunaj</strong></button>

@@ -52,7 +52,10 @@ p.medium-font {
     color: rgb(40, 112, 237);
     border-radius: 1.15rem;
     transition-duration: 0.4s;
-    padding: 0.5rem;
+    padding-right: 0.8rem;
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     border: 0.03rem solid black;
     cursor: pointer;
 }
@@ -82,8 +85,12 @@ p.medium-font {
 
 }
 .big {
-    font-size: larger;
+    font-weight: 700;
+    font-size: xx-large;
 }
 .kamata-input {
-    width: 4.8rem;
+    width: 6rem;
+}
+.output {
+    font-weight: 600;
 }
