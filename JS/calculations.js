@@ -76,13 +76,14 @@ function izracunajPlanOtplateKredita(kreditPodaci) {
       }
       // izracunaj ukupni iznos otplate
       ukupniIznosOtplate = glavnica + ukupniUdioKamate;
-      // pushaj ukupni iznos otplate i ukupni udio kamate
-      planOtplate.push ({
-        ukupniUdioKamate: ukupniUdioKamate.toFixed(2),
-        ukupniIznosOtplate: ukupniIznosOtplate.toFixed(2)
-      });
-
-      console.log("Ukupni iznos otplate : " + planOtplate[planOtplate.length - 1].ukupniIznosOtplate);
-      console.log("Ukupni udio kamate : " + planOtplate[planOtplate.length - 1].ukupniUdioKamate);
+      if(document.getElementById("anuitetStambeni")) {
+        document.getElementById("anuitetStambeni").innerHTML= "Iznos mjesečnog anuiteta : " + anuitet.toFixed(2) + " €";
+        document.getElementById("ukupniIznosStambeni").innerHTML = "Ukupni iznos otplate: " + ukupniIznosOtplate.toFixed(2) + " €";
+        document.getElementById("ukupniIznosKamateStambeni").innerHTML = "Ukupni iznos kamate u otplati: " + ukupniUdioKamate.toFixed(2) + " €";
+      } else {
+        document.getElementById("anuitetGotovinski").innerHTML= "Iznos mjesečnog anuiteta : " + anuitet.toFixed(2) + " €";
+        document.getElementById("ukupniIznosGotovinski").innerHTML = "Ukupni iznos otplate: " + ukupniIznosOtplate.toFixed(2) + " €";
+        document.getElementById("ukupnaKamataGotovinski").innerHTML = "Ukupni iznos kamate u otplati: " + ukupniUdioKamate.toFixed(2) + " €";
+      }
     return planOtplate;
   }

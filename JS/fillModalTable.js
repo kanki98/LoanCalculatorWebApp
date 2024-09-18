@@ -6,10 +6,7 @@ function osvjeziModalnuTablicu() {
         const tablicaOtplateKredita = document.getElementById("stambeniKredit-tablica");
         const tbody = tablicaOtplateKredita.querySelector("tbody");
         tbody.innerHTML = "";
-        //formatiranje outputa
-        function formatNumber(number) {
-            return number.toLocaleString('hr-HR', { minimumFractionDigits: 2, maximumFractionDigits: 3 });
-        }
+
         // Izračunaj plan otplate
         const planOtplate = izracunajPlanOtplateKredita(kreditPodaci);
         console.log(planOtplate);
@@ -27,20 +24,12 @@ function osvjeziModalnuTablicu() {
             red.innerHTML = `
                 <td data-label='Period'>${rata.mjesec}</td>
                 <td data-label='Datum dospijeća'>${formattedDate}</td>
-                <td data-label='Otplatni obrok'>${formatNumber(rata.anuitet) + " €"}</td>
-                <td data-label='Glavnica'>${formatNumber(rata.udioGlavnice) + " €"}</td>
-                <td data-label='Kamata' >${formatNumber(rata.udioKamate) + " €"}</td>
-                <td data-label='Stanje kredita' >${formatNumber(rata.stanjeKredita) + " €"}</td>
+                <td data-label='Otplatni obrok'>${(rata.anuitet) + " €"}</td>
+                <td data-label='Glavnica'>${(rata.udioGlavnice) + " €"}</td>
+                <td data-label='Kamata' >${(rata.udioKamate) + " €"}</td>
+                <td data-label='Stanje kredita' >${(rata.stanjeKredita) + " €"}</td>
             `;
-            tablicaOtplateKredita.appendChild(red);
+            tbody.appendChild(red);
         });
-        let anuitet = document.getElementById("numberInput1");
-        let ukupniIznos = document.getElementById("rataGotovinski-input");
-        let ukupnaKamata = document.getElementById("numberInputMonth4");
-
-        anuitet.innerHTML = "Iznos mjesečnog anuiteta: " + planOtplate[planOtplate.length - 1].anuitet + " €";
-        ukupniIznos.innerHTML = "Ukupni iznos otplate: " + planOtplate[planOtplate.length - 1].ukupniIznosOtplate + " €";
-        ukupnaKamata.innerHTML = "Ukupni iznos kamate u otplati: " + planOtplate[planOtplate.length - 1].ukupniUdioKamate + " €";
     }
 }
-// data-label="Period" data-label="Datum dospijeća data-label="Otplatni obrok" data-label="Glavnica" data-label="Kamata" data-label="Stanje kredita"
