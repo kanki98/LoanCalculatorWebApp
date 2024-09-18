@@ -94,3 +94,6 @@ p.medium-font {
 .output {
     font-weight: 600;
 }
+.my-padding {
+    padding-top: 3rem;
+}
