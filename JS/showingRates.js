@@ -5,11 +5,11 @@ function showRate(rateInputId, rateOutputId, rateDisplayId) {
     var rateValue = rateInput.value + " %";
 
     rateOutput.innerHTML = "Vaš odabir : " + rateValue;
-    rateDisplay.innerHTML = "Kamatna stopa: " + rateValue;
+    rateDisplay.innerHTML = "Kamatna stopa : " + rateValue;
 
     rateInput.oninput = function() {
             rateValue = this.value + " %";
             rateOutput.innerHTML = "Vaš odabir : " + rateValue;
-            rateDisplay.innerHTML = "Kamatna stopa: " + rateValue;
+            rateDisplay.innerHTML = "Kamatna stopa : " + rateValue;
     }   
 }
