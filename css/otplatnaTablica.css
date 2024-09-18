@@ -29,7 +29,7 @@ table {
     .my-table, .my-table tbody, .my-table th, .my-table td, .my-table tr {
         display: block;
     }
-    .my-table thead {
+    .my-table thead{
         display: none;
     }
     .my-table tr {
