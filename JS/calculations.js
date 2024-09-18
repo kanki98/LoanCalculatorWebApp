@@ -1,14 +1,14 @@
-function izracunajPlanOtplateKredita() {
-    const kreditPodaci = JSON.parse(localStorage.getItem("kreditPodaci"));
+function izracunajPlanOtplateKredita(kreditPodaci) {
+    //const kreditPodaci = JSON.parse(localStorage.getItem("kreditPodaci"));
     console.log("Kredit podaci koji su usli u izracunaj plan otplate funkciju : " + kreditPodaci);
     //dohvaćamo podatke iz local storage 
     const glavnica = kreditPodaci.glavnica;
     const godisnjaKamatnaStopa = kreditPodaci.godisnjaKamatnaStopa;
     const rokOtplate = kreditPodaci.rokOtplate;
 
-    console.log("glavnica iz UI je" + glavnica);
-    console.log("rok otplate iz UI je" + rokOtplate);
-    console.log("godisnja kamatna stopa iz UI je" + godisnjaKamatnaStopa);
+    console.log("glavnica iz UI je " + glavnica);
+    console.log("rok otplate iz UI je " + rokOtplate);
+    console.log("godisnja kamatna stopa iz UI je " + godisnjaKamatnaStopa);
     // Pretvaramo godišnju kamatnu stopu u mjesečnu
     const mjesecnaKamatnaStopaNonFixed = godisnjaKamatnaStopa / 12;
     mjesecnaKamatnaStopa = mjesecnaKamatnaStopaNonFixed.toFixed(3);
@@ -24,30 +24,34 @@ function izracunajPlanOtplateKredita() {
   
     // Inicijaliziramo preostali dug, udio kamate i udio glavnice
     let stanjeKredita = glavnica;
-    console.log("Stanje kredita je " + stanjeKredita);
     let udioKamate = 0;
     let udioGlavnice = 0;
     let anuitetStart  = 0;
-  
+    let ukupniUdioKamate = 0;
+    let ukupniIznosOtplate = glavnica;
     // Iteriramo kroz sve rate
     for (let mjesec = 0; mjesec <= rokOtplate; mjesec++) {
         console.log("Iteracija rata, trenutni korak : " + mjesec);
+
         // ako je razdoblje placanja nulto tj tek je ugovoren kredit, sve osim glavnice je 0
         if(mjesec === 0) {
           udioKamate = 0;
           udioGlavnice = 0;
           stanjeKredita = glavnica;
           anuitet = anuitetStart;
+
         console.log("Anuitet = " + anuitet); 
         console.log("udio kamate = " + udioKamate); 
         console.log("udio glavnice = " + udioGlavnice);
         console.log("stanje kredita " + stanjeKredita);
         console.log("Kraj podatak o :" + mjesec + ". mjesecu");
+
         }else {
             
         anuitet = anuitetCalculation;
           // Izračunavamo kamatu za trenutni mjesec
         udioKamate = (stanjeKredita * mjesecnaKamatnaStopa) / 100;
+        ukupniUdioKamate += udioKamate;
         // Izračunavamo otplatu glavnice za trenutni mjesec
         udioGlavnice = anuitet - udioKamate;
     
@@ -66,9 +70,19 @@ function izracunajPlanOtplateKredita() {
           anuitet: anuitet.toFixed(2),
           udioGlavnice: udioGlavnice.toFixed(2),
           udioKamate: udioKamate.toFixed(2),
-          stanjeKredita: stanjeKredita.toFixed(2)
+          stanjeKredita: stanjeKredita.toFixed(2),
+          //ukupniUdioKamate: ukupniUdioKamate.toFixed(2),
         });
       }
-  
+      // izracunaj ukupni iznos otplate
+      ukupniIznosOtplate = glavnica + ukupniUdioKamate;
+      // pushaj ukupni iznos otplate i ukupni udio kamate
+      planOtplate.push ({
+        ukupniUdioKamate: ukupniUdioKamate.toFixed(2),
+        ukupniIznosOtplate: ukupniIznosOtplate.toFixed(2)
+      });
+
+      console.log("Ukupni iznos otplate : " + planOtplate[planOtplate.length - 1].ukupniIznosOtplate);
+      console.log("Ukupni udio kamate : " + planOtplate[planOtplate.length - 1].ukupniUdioKamate);
     return planOtplate;
   }

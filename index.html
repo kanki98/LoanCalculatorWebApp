@@ -38,11 +38,6 @@
                         <li class="nav-item">
                             <a class="nav-link active" href="index.html"><i class="fa fa-home nav-i"></i>Stambeni kredit</a>
                         </li>
-                        <!--
-                        <li class="nav-item">
-                            <a class="nav-link" href="otplatni.html"><i class="fa fa-table nav-i "></i>Otplatni plan</a>
-                        </li>
-                        -->
                         <li class="nav-item">
                             <a class="nav-link" href="gotovinski.html"><i class="fa fa-money nav-i"></i>Gotovinski kredit</a>
                         </li>
@@ -92,13 +87,12 @@
             </form>
             <div class="column">
                 <h3 style="padding-top: 1rem; padding-bottom: 1rem;">Stambeni kredit</h3>
-                <p class="anuitet" id="anuitedStambeni">Iznos mjesečnog anuiteta: </p>
-                <p>Ukupni iznos otplate: </p>
-                <p>Ukupni iznos kamate: </p>
-                <p>Kamatna stopa: </p>
+                <p class="anuitet" id="anuitetStambeni">Iznos mjesečnog anuiteta: </p>
+                <p id="ukupniIznosStambeni">Ukupni iznos otplate: </p>
+                <p id="ukupniIznosKamateStambeni">Ukupni iznos kamate: </p>
+                <p id="kamatnaStopaStambeni">Kamatna stopa: </p>
                 <p>Vrsta kamatne stope: fiksna</p>
-            </div>
-            <div class="column">
+                <div class="my-border"></div>
                 <h3>Informacije o kreditu</h3>
                 <button class="mybtn" id="myBtn1">
                         <i class="fa fa-table btn-i"></i>Otvorite otplatni plan
@@ -108,34 +102,30 @@
                     <span class="otplatniTitle">Otplatni plan za stambeni kredit</span>
                     <span class="close">&times;</span>
                     <div class="modal-content">
-                        <table class="my-table" id="stambeniKredit-tablica">
-                                <thead>
-                                    <tr>
-                                        <th>Period</th>
-                                        <th>Datum dospijeća</th>
-                                        <th>Otplatni obrok</th>
-                                        <th>Glavnica</th>
-                                        <th>Kamata</th>
-                                        <th>Stanje kredita</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td data-label="Period">No data</td>
-                                        <td data-label="Datum dospijeća">No data</td>
-                                        <td data-label="Otplatni obrok">No data</td>
-                                        <td data-label="Glavnica">No data</td>
-                                        <td data-label="Kamata">No data</td>
-                                        <td data-label="Stanje kredita">No data</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                    <table class="my-table" id="stambeniKredit-tablica">
+                            <thead>
+                                <tr>
+                                    <th>Period</th>
+                                    <th>Datum dospijeća</th>
+                                    <th>Otplatni obrok</th>
+                                    <th>Glavnica</th>
+                                    <th>Kamata</th>
+                                    <th>Stanje kredita</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-label="Period">No data</td>
+                                    <td data-label="Datum dospijeća">No data</td>
+                                    <td data-label="Otplatni obrok">No data</td>
+                                    <td data-label="Glavnica">No data</td>
+                                    <td data-label="Kamata">No data</td>
+                                    <td data-label="Stanje kredita">No data</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-                <div class="my-border"></div>
-                <h4 style="padding-top: 1rem; padding-bottom: 1rem;">Stambeni kredit</h4>
-                <strong><p id="stambeniKamata-ispis" class="medium-font">Kamatna stopa: %</p></strong>
-                <strong><p class="medium-font">Vrsta kamatne stope: fiksna</p></strong>
             </div>
         </div>
     </main>   
@@ -153,8 +143,9 @@
 <script src="JS/sliders.js" defer></script>
 <script src="JS/fullscreen_overlay.js"></script>
 <script src="JS/showingRates.js"></script>
-<script src="JS/tables.js"></script>
+<script src="JS/fillModalTable.js"></script>
 <script src="JS/calculations.js"></script>
+<script src="JS/handleFormSubmission.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         initializeMoneySlider("myRange1", "myRange1Output", "minValue", "maxValue", "numberInput1");
@@ -166,7 +157,7 @@
          modalOperations("myModal", "myBtn1", "close" );
     });
     document.addEventListener("DOMContentLoaded", function() {
-        showRate("rataStambeni-input", "rataStambeni-output", "stambeniKamata-ispis");
+        showRate("rataStambeni-input", "rataStambeni-output", "kamatnaStopaStambeni");
     });
     document.getElementById("stambeniForm").addEventListener("submit", handleFormSubmission);
 </script>

@@ -42,11 +42,6 @@
                 <li class="nav-item">
                     <a class="nav-link active" href="gotovinski.html"><i class="fa fa-money nav-i"></i>Gotovinski kredit</a>
                 </li>
-                <!--
-                    <li class="nav-item">
-                        <a class="nav-link" href="otplatni.html"><i class="fa fa-table nav-i "></i>Otplatni plan</a>
-                    </li>
-                -->
                 <li class="nav-item mynav-text">
                     <a class="nav-link" href="index.html"><i class="fa fa-home nav-i"></i>Stambeni kredit</a>
                 </li>
@@ -88,7 +83,7 @@
                       <br>
                       <div class="slidecontainer">
                         <h3>Odaberite kamatnu stopu</h3>
-                        <input type="number" id="rataGotovinski-input" class="rGotovinski width50 my-input-field" min="1" max="10" value="5">
+                        <input type="number" id="rataGotovinski-input" class="rGotovinski width50 my-input-field" min="1" max="20" step="0.01" value="5">
                         <strong><span id="rataGotovinski-output" class="width50"></span></strong>
                       </div>
                 </div>
@@ -97,14 +92,12 @@
             </form>
             <div class="column">
                 <h3 style="padding-top: 1rem; padding-bottom: 1rem;">Gotovinski kredit</h3>
-                <p class="anuitet">Iznos mjesečnog anuiteta: </p>
-                <p>Ukupni iznos otplate: </p>
-                <p>Ukupni iznos kamate: </p>
-                <p>Kamatna stopa: </p>
-                <p>Efektivna kamatna stopa: </p>
-                <p>Vrsta kamatne stope: </p>
-            </div>
-            <div class="column">
+                <p class="anuitet" id="anuitetGotovinski">Iznos mjesečnog anuiteta: </p>
+                <p id="ukupniIznosGotovinski">Ukupni iznos otplate: </p>
+                <p id="ukupnaKamataGotovinski">Ukupni iznos kamate: </p>
+                <p id="gotovinskiKamata-ispis">Kamatna stopa: </p>
+                <p>Vrsta kamatne stope: fiksna</p>
+                <div class="my-border"></div>
                 <h3>Informacije o kreditu</h3>
                 <button class="mybtn" id="myBtn2">
                     <i class="fa fa-table btn-i"></i>Otvorite otplatni plan
@@ -114,7 +107,7 @@
                     <span class="otplatniTitle">Otplatni plan za gotovinski kredit</span>
                     <span class="close">&times;</span>
                     <div class="modal-content">
-                        <table class="my-table">
+                        <table class="my-table" id="gotovinskiKredit-tablica">
                             <thead>
                                 <tr>
                                     <th>Period</th>
@@ -127,48 +120,18 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td data-label="Period">1</td>
-                                    <td data-label="Datum dospijeća">15.10.2024.</td>
-                                    <td data-label="Otplatni obrok">500,00 €</td>
-                                    <td data-label="Glavnica">300,00 €</td>
-                                    <td data-label="Kamata">200,00 €</td>
-                                    <td data-label="Stanje kredita">69.700,00 €</td>
+                                    <td data-label="Period">No Data</td>
+                                    <td data-label="Datum dospijeća">No Data</td>
+                                    <td data-label="Otplatni obrok">No Data</td>
+                                    <td data-label="Glavnica">No Data</td>
+                                    <td data-label="Kamata">No Data</td>
+                                    <td data-label="Stanje kredita">No Data</td>
                                 </tr>
-                                <tr>
-                                    <td data-label="Period">2</td>
-                                    <td data-label="Datum dospijeća">15.11.2024.</td>
-                                    <td data-label="Otplatni obrok">500,00 €</td>
-                                    <td data-label="Glavnica">300,00 €</td>
-                                    <td data-label="Kamata">200,00 €</td>
-                                    <td data-label="Stanje kredita">69.400,00 €</td>
-                                </tr>
-                                <tr>
-                                    <td data-label="Period">2</td>
-                                    <td data-label="Datum dospijeća">15.11.2024.</td>
-                                    <td data-label="Otplatni obrok">500,00 €</td>
-                                    <td data-label="Glavnica">300,00 €</td>
-                                    <td data-label="Kamata">200,00 €</td>
-                                    <td data-label="Stanje kredita">69.400,00 €</td>
-                                </tr>
-                                <tr>
-                                    <td data-label="Period">2</td>
-                                    <td data-label="Datum dospijeća">15.11.2024.</td>
-                                    <td data-label="Otplatni obrok">500,00 €</td>
-                                    <td data-label="Glavnica">300,00 €</td>
-                                    <td data-label="Kamata">200,00 €</td>
-                                    <td data-label="Stanje kredita">69.400,00 €</td>
-                                </tr>
-                                <!-- Add more rows as needed -->
                             </tbody>
                         </table>
                     </div>
-                </div>
-                <div class="my-border"></div>
-                <h4 style="padding-top: 1rem; padding-bottom: 1rem;">Gotovinski kredit</h4>
-                <strong><p id="gotovinskiKamata-ispis" class="medium-font">Kamatna stopa: %</p></strong>
-                <strong><p class="medium-font">Vrsta kamatne stope: fiksna</p></strong>
+                </div>        
             </div>
-         
         </div>
     </main>   
     <footer class="mycolor-bg text-white text-center py-4 montserrat-mainFont">
@@ -181,7 +144,12 @@
             </ul>
         </div>
     </footer>
-
+    <script src="JS/sliders.js" defer></script>
+    <script src="JS/fullscreen_overlay.js"></script>
+    <script src="JS/showingRates.js"></script>
+    <script src="JS/fillModalTable2.js"></script>
+    <script src="JS/calculations.js"></script>
+    <script src="JS/handleFormSubmission.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             initializeMoneySlider("myRange3", "myRange3Output", "minValue", "maxValue", "numberInput3");
@@ -195,6 +163,7 @@
         document.addEventListener("DOMContentLoaded", function() {
             showRate("rataGotovinski-input", "rataGotovinski-output", "gotovinskiKamata-ispis");
         });
+        document.getElementById("gotovinskiForm").addEventListener("submit", handleFormSubmission2);
     </script>
 </body>
 </html>
