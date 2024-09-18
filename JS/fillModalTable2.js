@@ -1,13 +1,11 @@
 function osvjeziModalnuTablicu2() {
     const kreditPodaci = JSON.parse(localStorage.getItem("kreditPodaci2"));
-    console.log("Kredit podaci " + kreditPodaci);
+    
     // ako su podaci o kreditu dostupni, popuni tablicu
     if (kreditPodaci) {
         const tablicaOtplateKredita = document.getElementById("gotovinskiKredit-tablica");
         const tbody = tablicaOtplateKredita.querySelector("tbody");
         tbody.innerHTML = "";
-        console.log("Tablica je : ", tbody);
-        //formatiranje outputa
         
         // Izračunaj plan otplate
         const planOtplate = izracunajPlanOtplateKredita(kreditPodaci);

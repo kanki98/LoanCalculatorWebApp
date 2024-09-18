@@ -7,6 +7,7 @@ function handleFormSubmission(event) {
   
     // pohrani kreditne podake u local storage
     localStorage.setItem("kreditPodaci", JSON.stringify({ glavnica, godisnjaKamatnaStopa, rokOtplate }));
+    // osvjezi modalnu tablicu
     osvjeziModalnuTablicu();
   }
 
@@ -17,8 +18,9 @@ function handleFormSubmission(event) {
     const glavnica = parseFloat(document.getElementById("numberInput3").value);
     const godisnjaKamatnaStopa = parseFloat(document.getElementById("rataGotovinski-input").value);
     const rokOtplate = parseInt(document.getElementById("numberInputMonth4").value);
-    console.log("dohvaceni anuitet iz HANDLE SUBMISSIONA jest : ",document.getElementById("anuitetGotovinski"));
+
     // pohrani kreditne podake u local storage
     localStorage.setItem("kreditPodaci2", JSON.stringify({ glavnica, godisnjaKamatnaStopa, rokOtplate }));
+    // osvjezi modalnu tablicu
     osvjeziModalnuTablicu2();
   }
