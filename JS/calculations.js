@@ -61,10 +61,14 @@ function izracunajPlanOtplateKredita(kreditPodaci) {
             document.getElementById("anuitetStambeni").innerHTML = anuitet.toFixed(2) + " €";
             document.getElementById("ukupniIznosStambeni").innerHTML = ukupniIznosOtplate.toFixed(2) + " €";
             document.getElementById("ukupniIznosKamateStambeni").innerHTML = ukupniUdioKamate.toFixed(2) + " €";
+            document.getElementById("kamatnaStopaStambeni").innerHTML = document.getElementById("rataStambeni-input").value + " %";
+            document.getElementById("tipKamatneStopeStambeni").innerHTML = "fiksna";
       } else {
             document.getElementById("anuitetGotovinski").innerHTML = anuitet.toFixed(2) + " €";
             document.getElementById("ukupniIznosGotovinski").innerHTML = ukupniIznosOtplate.toFixed(2) + " €";
             document.getElementById("ukupnaKamataGotovinski").innerHTML = ukupniUdioKamate.toFixed(2) + " €";
+            document.getElementById("kamatnaStopaGotovinski").innerHTML = document.getElementById("rataGotovinski-input").value + " %";
+            document.getElementById("tipKamatneStopeGotovinski").innerHTML = "fiksna";
       }
     return planOtplate;
   }

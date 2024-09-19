@@ -35,11 +35,11 @@
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav mynav-text">
-                <li class="nav-item">
-                    <a class="nav-link active" href="gotovinski.html"><i class="fa fa-money nav-i"></i>Gotovinski kredit</a>
-                </li>
                 <li class="nav-item mynav-text">
                     <a class="nav-link" href="index.html"><i class="fa fa-home nav-i"></i>Stambeni kredit</a>
+                </li>    
+                <li class="nav-item">
+                    <a class="nav-link active" href="gotovinski.html"><i class="fa fa-money nav-i"></i>Gotovinski kredit</a>
                 </li>
                 </ul>
             </div>
@@ -102,11 +102,11 @@
                     </div>
                     <div class="mid-grid-group">
                         <p class="mid-column">Kamatna stopa : </p>
-                        <p  class="mid-result" id="gotovinskiKamata-ispis"></p>
+                        <p  class="mid-result" id="kamatnaStopaGotovinski"></p>
                     </div>
                     <div class="mid-grid-group">
                         <p class="mid-column">Vrsta kamatne stope :</p>
-                        <p  class="mid-result">fiksna</p>
+                        <p  class="mid-result" id="tipKamatneStopeGotovinski"></p>
                     </div>
                 </div>
                 <div class="my-border"></div>
@@ -172,7 +172,7 @@
              modalOperations("myModal2", "myBtn2", "close" );
         });
         document.addEventListener("DOMContentLoaded", function() {
-            showRate("rataGotovinski-input", "rataGotovinski-output", "gotovinskiKamata-ispis");
+            showRate("rataGotovinski-input", "rataGotovinski-output");
         });
         document.getElementById("gotovinskiForm").addEventListener("submit", handleFormSubmission2);
     </script>

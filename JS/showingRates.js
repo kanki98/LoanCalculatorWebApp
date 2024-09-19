@@ -1,15 +1,14 @@
-function showRate(rateInputId, rateOutputId, rateDisplayId) {
+function showRate(rateInputId, rateOutputId) {
     var rateInput = document.getElementById(rateInputId);
     var rateOutput = document.getElementById(rateOutputId);
-    var rateDisplay = document.getElementById(rateDisplayId);
+   
     var rateValue = rateInput.value + " %";
-
+    
     rateOutput.innerHTML = "Vaš odabir : " + rateValue;
-    rateDisplay.innerHTML = rateValue;
 
     rateInput.oninput = function() {
             rateValue = this.value + " %";
             rateOutput.innerHTML = "Vaš odabir : " + rateValue;
-            rateDisplay.innerHTML = rateValue;
+           
     }   
 }

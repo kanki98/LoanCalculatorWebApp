@@ -105,7 +105,7 @@
                     </div>
                     <div class="mid-grid-group">
                         <p class="mid-column">Vrsta kamatne stope: </p>
-                        <p  class="mid-result">fiksna</p>
+                        <p  class="mid-result" id="tipKamatneStopeStambeni"></p>
                     </div>
                 </div>
                 <div class="my-border"></div>
@@ -172,7 +172,7 @@
          modalOperations("myModal", "myBtn1", "close" );
     });
     document.addEventListener("DOMContentLoaded", function() {
-        showRate("rataStambeni-input", "rataStambeni-output", "kamatnaStopaStambeni");
+        showRate("rataStambeni-input", "rataStambeni-output");
     });
     document.getElementById("stambeniForm").addEventListener("submit", handleFormSubmission);
 </script>
