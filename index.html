@@ -88,11 +88,26 @@
             </form>
             <div class="column">
                 <h3 class="my-h3 big">Stambeni kredit</h3>
-                <p class="anuitet" id="anuitetStambeni">Iznos mjesečnog anuiteta : </p>
-                <p id="ukupniIznosStambeni" class="mid-column">Ukupni iznos otplate : </p>
-                <p id="ukupniIznosKamateStambeni" class="mid-column">Ukupni iznos kamate u otplati : </p>
-                <p id="kamatnaStopaStambeni"class="mid-column" >Kamatna stopa : </p>
-                <p class="mid-column">Vrsta kamatne stope:  fiksna</p>
+                <div class="mid-grid">
+                    <p class="anuitet">Iznos mjesečnog anuiteta : </p>
+                    <p class="anuitet-result" id="anuitetStambeni"></p>
+                    <div class="mid-grid-group">
+                         <p class="mid-column">Ukupni iznos otplate : </p>
+                         <p  class="be-bolder" id="ukupniIznosStambeni"></p>
+                    </div>
+                    <div class="mid-grid-group">
+                        <p class="mid-column">Ukupni iznos kamate u otplati : </p>
+                        <p  class="mid-result" id="ukupniIznosKamateStambeni"></p>
+                    </div>
+                    <div class="mid-grid-group">
+                        <p class="mid-column" >Kamatna stopa : </p>
+                        <p  class="mid-result" id="kamatnaStopaStambeni"></p>
+                    </div>
+                    <div class="mid-grid-group">
+                        <p class="mid-column">Vrsta kamatne stope: </p>
+                        <p  class="mid-result">fiksna</p>
+                    </div>
+                </div>
                 <div class="my-border"></div>
                 <h3 class="my-h3 my-padding">Informacije o kreditu</h3>
                 <button class="mybtn" id="myBtn1">

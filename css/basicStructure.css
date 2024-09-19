@@ -71,3 +71,24 @@
 p.medium-font {
     font-size: medium;
 }
+.mid-grid {
+    display: grid;
+}
+.mid-grid p {
+    margin-bottom: 0.5rem;
+}
+.mid-grid-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+}
+.mid-column {
+    padding-left: 3rem;
+    text-align: left;
+}
+.mid-result {
+    padding-right: 3rem;
+    text-align: left;
+}

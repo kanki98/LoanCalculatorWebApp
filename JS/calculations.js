@@ -58,13 +58,13 @@ function izracunajPlanOtplateKredita(kreditPodaci) {
 
       // popunjavanje osnovnih podataka o kreditu, detaljniji ispis je u drugoj tablici
       if(document.getElementById("anuitetStambeni")) {
-            document.getElementById("anuitetStambeni").innerHTML= "Iznos mjesečnog anuiteta : " + anuitet.toFixed(2) + " €";
-            document.getElementById("ukupniIznosStambeni").innerHTML = "Ukupni iznos otplate : " + ukupniIznosOtplate.toFixed(2) + " €";
-            document.getElementById("ukupniIznosKamateStambeni").innerHTML = "Ukupni iznos kamate u otplati : " + ukupniUdioKamate.toFixed(2) + " €";
+            document.getElementById("anuitetStambeni").innerHTML = anuitet.toFixed(2) + " €";
+            document.getElementById("ukupniIznosStambeni").innerHTML = ukupniIznosOtplate.toFixed(2) + " €";
+            document.getElementById("ukupniIznosKamateStambeni").innerHTML = ukupniUdioKamate.toFixed(2) + " €";
       } else {
-            document.getElementById("anuitetGotovinski").innerHTML= "Iznos mjesečnog anuiteta : " + anuitet.toFixed(2) + " €";
-            document.getElementById("ukupniIznosGotovinski").innerHTML = "Ukupni iznos otplate : " + ukupniIznosOtplate.toFixed(2) + " €";
-            document.getElementById("ukupnaKamataGotovinski").innerHTML = "Ukupni iznos kamate u otplati : " + ukupniUdioKamate.toFixed(2) + " €";
+            document.getElementById("anuitetGotovinski").innerHTML = anuitet.toFixed(2) + " €";
+            document.getElementById("ukupniIznosGotovinski").innerHTML = ukupniIznosOtplate.toFixed(2) + " €";
+            document.getElementById("ukupnaKamataGotovinski").innerHTML = ukupniUdioKamate.toFixed(2) + " €";
       }
     return planOtplate;
   }
