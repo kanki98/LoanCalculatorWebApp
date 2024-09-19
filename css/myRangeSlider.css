@@ -46,10 +46,17 @@
     
     text-align: center;
   }
+  .width80 {
+    font-size: large;
+    font-weight: 900;
+    width: 100%;
+    padding-top: 1rem;
+    text-align: center;
+  }
   span.width50 {
     width: 50%;
     font-size: large;
-    font-weight: 700;
+    font-weight: 900;
   }
   span.width25 {
     width: 25%;

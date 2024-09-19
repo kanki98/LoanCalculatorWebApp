@@ -89,4 +89,41 @@
         padding-top: 0.5rem;
         padding-bottom: 0.20rem;
     }
+    .anuitet-result {
+      font-size: x-large;
+    }
+    .output {
+      font-size: large;
+    }
+    .be-bolder {
+      font-size: medium;
+    }
+    .mid-result {
+      font-size: large;
+    }
+    .mid-column {
+      font-size: medium;
+    }
+    span.width50 {
+      font-size: large;
+    }
+    span.width25 {
+      font-weight: 500;
+    }
+    #minValue {
+      font-size: small;
+    }
+    #maxValue {
+      font-size: small;
+    }
+    #minValueMonth {
+      font-size: small;
+    }
+    #maxValueMonth {
+      font-size: small;
+    }
+    .info-padding {
+      font-size: medium;
+    }
+
   }

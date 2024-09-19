@@ -63,7 +63,6 @@
                           min="10000" max="500000" step="1000" value="250000">
                       </div>
                     <br>
-                    <br>
                       <div class="slidecontainer">
                         <h3>Odaberite rok otplate</h3>
                         <input type="range" step="1" min="36" max="360" value="180" class="slider" id="myRange2">
@@ -80,7 +79,7 @@
                         <h3 class="my-h3">Odaberite kamatnu stopu</h3>
                         <input type="number" id="rataStambeni-input" class="rStambeni kamata-input my-input-field output" minlength="2" maxlength="2"
                         min="1" max="20" step="0.01" value="5">
-                        <strong><span id="rataStambeni-output" class="width50 output"></span></strong>
+                        <strong><div id="rataStambeni-output" class="width80 output"></div></strong>
                       </div>
                 </div>
                 <button class="mybtn" type="submit"><i class="fa fa-pencil-square-o btn-i"></i><strong>Izračunaj</strong></button>
@@ -113,6 +112,7 @@
                 <button class="mybtn" id="myBtn1">
                         <i class="fa fa-table btn-i"></i><strong>Otvorite detaljni otplatni plan</strong>
                 </button>
+                <h5 class="info-padding ">* Izračuni na ovom kalkulatoru su čisto informativnog karaktera.</h5>
                 <div id="myModal" class="modal">
                     <span class="otplatniTitle">Otplatni plan za stambeni kredit</span>
                     <span class="close">&times;</span>
@@ -147,11 +147,6 @@
     <footer class="mycolor-bg text-white text-center py-4 montserrat-mainFont">
         <div class="container">
             <p>&copy; 2024 Karlo Kranjčec, FERIT. Ova stranica je izrađena za potrebe završnog rada.</p>
-            <ul class="list-inline">
-                <li class="list-inline-item"><a href="#" class="text-white">Zasad tu</a></li>
-                <li class="list-inline-item"><a href="#" class="text-white">Nema ništa</a></li>
-                <li class="list-inline-item"><a href="#" class="text-white">U Linkovima</a></li>
-            </ul>
         </div>
     </footer>
 </body>
