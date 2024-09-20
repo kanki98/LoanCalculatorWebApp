@@ -56,17 +56,20 @@ function izracunajPlanOtplateKredita(kreditPodaci) {
       // izracunaj ukupni iznos otplate
       ukupniIznosOtplate = glavnica + ukupniUdioKamate;
 
-      // popunjavanje osnovnih podataka o kreditu, detaljniji ispis je u drugoj tablici
+      // popunjavanje i formatiranje osnovnih podataka o kreditu, detaljniji ispis je u drugoj tablici
+      function formatNumber(number) {
+        return number.toLocaleString("hr-HR", {style:"currency", currency:"EUR"});
+      }
       if(document.getElementById("anuitetStambeni")) {
-            document.getElementById("anuitetStambeni").innerHTML = anuitet.toFixed(2) + " €";
-            document.getElementById("ukupniIznosStambeni").innerHTML = ukupniIznosOtplate.toFixed(2) + " €";
-            document.getElementById("ukupniIznosKamateStambeni").innerHTML = ukupniUdioKamate.toFixed(2) + " €";
+            document.getElementById("anuitetStambeni").innerHTML = formatNumber(Number(anuitet.toFixed(2)));
+            document.getElementById("ukupniIznosStambeni").innerHTML = formatNumber(Number(ukupniIznosOtplate.toFixed(2)));
+            document.getElementById("ukupniIznosKamateStambeni").innerHTML = formatNumber(Number(ukupniUdioKamate.toFixed(2)));
             document.getElementById("kamatnaStopaStambeni").innerHTML = document.getElementById("rataStambeni-input").value + " %";
             document.getElementById("tipKamatneStopeStambeni").innerHTML = "fiksna";
       } else {
-            document.getElementById("anuitetGotovinski").innerHTML = anuitet.toFixed(2) + " €";
-            document.getElementById("ukupniIznosGotovinski").innerHTML = ukupniIznosOtplate.toFixed(2) + " €";
-            document.getElementById("ukupnaKamataGotovinski").innerHTML = ukupniUdioKamate.toFixed(2) + " €";
+            document.getElementById("anuitetGotovinski").innerHTML = formatNumber(Number(anuitet.toFixed(2)));
+            document.getElementById("ukupniIznosGotovinski").innerHTML = formatNumber(Number(ukupniIznosOtplate.toFixed(2)));
+            document.getElementById("ukupnaKamataGotovinski").innerHTML = formatNumber(Number(ukupniUdioKamate.toFixed(2)));
             document.getElementById("kamatnaStopaGotovinski").innerHTML = document.getElementById("rataGotovinski-input").value + " %";
             document.getElementById("tipKamatneStopeGotovinski").innerHTML = "fiksna";
       }

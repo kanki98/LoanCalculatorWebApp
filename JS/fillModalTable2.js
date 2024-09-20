@@ -11,6 +11,11 @@ function osvjeziModalnuTablicu2() {
         const planOtplate = izracunajPlanOtplateKredita(kreditPodaci);
         console.log(planOtplate);
         
+        // Formatiranje brojeva koji će se prikazati u tablici da bi imali format npr. 10.000,00
+        function formatNumber(number) {
+            return number.toLocaleString("hr-HR", {style:"currency", currency:"EUR"});
+          }
+
         // Popuni tablicu podacima iz plana otplate
         planOtplate.forEach((rata, index) => {
             const red = document.createElement("tr");
@@ -24,10 +29,10 @@ function osvjeziModalnuTablicu2() {
             red.innerHTML = `
                 <td data-label='Period'>${rata.mjesec}</td>
                 <td data-label='Datum dospijeća'>${formattedDate}</td>
-                <td data-label='Otplatni obrok'>${(rata.anuitet.toLocaleString("hr-HR", {style:"currency", currency:"EUR"})) + " €"}</td>
-                <td data-label='Glavnica'>${(rata.udioGlavnice.toLocaleString("hr-HR", {style:"currency", currency:"EUR"})) + " €"}</td>
-                <td data-label='Kamata' >${(rata.udioKamate.toLocaleString("hr-HR", {style:"currency", currency:"EUR"})) + " €"}</td>
-                <td data-label='Stanje kredita' >${(rata.stanjeKredita.toLocaleString("hr-HR", {style:"currency", currency:"EUR"})) + " €"}</td>
+                <td data-label='Otplatni obrok'>${(formatNumber(Number(rata.anuitet)))}</td>
+                <td data-label='Glavnica'>${formatNumber(Number(rata.udioGlavnice))}</td>
+                <td data-label='Kamata' >${formatNumber(Number(rata.udioKamate))}</td>
+                <td data-label='Stanje kredita' >${formatNumber(Number(rata.stanjeKredita))}</td>
             `;
             tbody.appendChild(red);
         });    

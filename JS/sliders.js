@@ -1,3 +1,8 @@
+function formatNumber(number) {
+    
+    return number.toLocaleString("hr-HR", {style:"currency", currency:"EUR"});
+}
+
 function initializeMoneySlider(sliderId, outputId, minId, maxId, numberInputId) {
     var slider = document.getElementById(sliderId);
     var output = document.getElementById(outputId);
@@ -5,18 +10,18 @@ function initializeMoneySlider(sliderId, outputId, minId, maxId, numberInputId) 
     var maxValue = document.getElementById(maxId);
     var numberInput = document.getElementById(numberInputId);
 
-    minValue.innerHTML = "Min : " + slider.min + " €";
-    maxValue.innerHTML = "Max : " + slider.max + " €";
-    output.innerHTML = "Vaš odabir : " + slider.value + " €";
+    minValue.innerHTML = "Min : " + formatNumber(Number(slider.min));
+    maxValue.innerHTML = "Max : " + formatNumber(Number(slider.max));
+    output.innerHTML = formatNumber(Number(slider.value));
     numberInput.value = slider.value;
 
     slider.oninput = function() {
-        output.innerHTML = "Vaš odabir : " + this.value + " €";
+        output.innerHTML = formatNumber(Number(this.value));
         numberInput.value = this.value;
     }
     numberInput.oninput = function() {
         slider.value = this.value;
-        output.innerHTML = "Vaš odabir : " + this.value + " €";
+        output.innerHTML = formatNumber(Number(this.value));
     }
 }
 
@@ -40,3 +45,4 @@ function initializeMonthSlider(sliderId, outputId, minId, maxId, numberInputId) 
         output.innerHTML = "Vaš odabir : " + this.value + " mj.";
     }
 }
+
