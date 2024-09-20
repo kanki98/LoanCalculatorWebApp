@@ -6,7 +6,7 @@ function osvjeziModalnuTablicu() {
         const tablicaOtplateKredita = document.getElementById("stambeniKredit-tablica");
         const tbody = tablicaOtplateKredita.querySelector("tbody");
         tbody.innerHTML = "";
-
+        
         // Izračunaj plan otplate
         const planOtplate = izracunajPlanOtplateKredita(kreditPodaci);
         console.log(planOtplate);

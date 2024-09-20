@@ -125,4 +125,5 @@ p.medium-font {
 .info-padding {
     padding-top: 1.2rem;
     padding-bottom: 1rem;
+    font-size: medium;
 }

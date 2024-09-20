@@ -11,12 +11,10 @@ function modalOperations(modalId, btnId, spanId ) {
   // When the user clicks the button, open the modal 
   btn.onclick = function() {
     modal.style.display = "block";
-    console.log("Stisnuo si na mene da se pokažem");
   }
   // When the user clicks on <span> (x), close the modal
   span.onclick = function() {
       modal.style.display = "none";
-      console.log("Stisnuo si na mene da nestanem");
   }
   // When the user clicks anywhere outside of the modal, close it
   window.onclick = function(event) {
