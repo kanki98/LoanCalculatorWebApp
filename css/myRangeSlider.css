@@ -1,7 +1,6 @@
 .slidecontainer {
     width: 100%;
   }
-  
   .slider {
     appearance: none;
     width: 80%;
@@ -14,36 +13,15 @@
     transition: opacity .2s;
     margin-top: 1rem;
   }
-  
   .slider:hover {
     opacity: 1;
   }
-  
-  .slider::-webkit-slider-thumb {
-    appearance: none;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background: #2196F3;
-    cursor: pointer;
-  }
-  
-  .slider::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background: #2196F3;
-    cursor: pointer;
-  }
-  
   .slider-values {
     display: flex;
     justify-content: space-between;
     margin-top: 1.25rem;
   }
-  
-  .slider-values span {
-    
+  .slider-values span { 
     text-align: center;
   }
   .width80 {
@@ -63,15 +41,21 @@
     font-size: medium;
     font-weight: 600;
   }
-  #minValue {
+  #minValue,#maxValue,#minValueMonth,#maxValueMonth {
     font-size: medium;
   }
-  #maxValue {
-    font-size: medium;
+  .slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #2196F3;
+    cursor: pointer;
   }
-  #minValueMonth {
-    font-size: medium;
-  }
-  #maxValueMonth {
-    font-size: medium;
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #2196F3;
+    cursor: pointer;
   }

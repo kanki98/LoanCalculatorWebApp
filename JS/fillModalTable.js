@@ -9,8 +9,8 @@ function osvjeziModalnuTablicu() {
         
         // Izračunaj plan otplate
         const planOtplate = izracunajPlanOtplateKredita(kreditPodaci);
-        console.log(planOtplate);
         
+        // Formatiranje brojeva koji će se prikazati u tablici da bi imali format npr. 10.000,00
         function formatNumber(number) {
             return number.toLocaleString("hr-HR", {style:"currency", currency:"EUR"});
           }

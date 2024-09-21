@@ -12,8 +12,8 @@ function initializeMoneySlider(sliderId, outputId, minId, maxId, numberInputId) 
 
     minValue.innerHTML = "Min : " + formatNumber(Number(slider.min));
     maxValue.innerHTML = "Max : " + formatNumber(Number(slider.max));
-    output.innerHTML = formatNumber(Number(slider.value));
-    numberInput.value = slider.value;
+    output.innerHTML = "Vaš odabir : " + (formatNumber(Number(slider.value)));
+    numberInput.value =slider.value;
 
     slider.oninput = function() {
         output.innerHTML = formatNumber(Number(this.value));
