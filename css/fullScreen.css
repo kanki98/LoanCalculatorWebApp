@@ -37,8 +37,7 @@
     padding-bottom: 0.25rem;
     border-radius: 25%;
   }
-  .close:hover,
-  .close:focus {
+  .close:hover,.close:focus {
     color: #000;
     background-color:rgb(75, 210, 219);
     text-decoration: none;

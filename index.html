@@ -117,7 +117,7 @@
                     <span class="otplatniTitle">Otplatni plan za stambeni kredit</span>
                     <span class="close">&times;</span>
                     <div class="modal-content">
-                    <table class="my-table" id="stambeniKredit-tablica">
+                        <table class="my-table" id="stambeniKredit-tablica">
                             <thead>
                                 <tr>
                                     <th>Period</th>
@@ -146,30 +146,29 @@
     </main>   
     <footer class="mycolor-bg text-white text-center py-4 montserrat-mainFont">
         <div class="container">
-            <p>&copy; 2024 Karlo Kranjčec, FERIT. Ova stranica je izrađena za potrebe završnog rada.</p>
+            <p>&copy; 2024 Karlo Kranjčec, FERIT. Ova stranica izrađena je za potrebe završnog rada.</p>
         </div>
     </footer>
 </body>
-<script src="JS/sliders.js"></script>
-<script src="JS/fullscreen_overlay.js"></script>
-<script src="JS/showingRates.js"></script>
-<script src="JS/fillModalTable.js"></script>
-<script src="JS/calculations.js"></script>
-<script src="JS/handleFormSubmission.js"></script>
+    <script src="JS/sliders.js"></script>
+    <script src="JS/fullscreen_overlay.js"></script>
+    <script src="JS/showingRates.js"></script>
+    <script src="JS/fillModalTable.js"></script>
+    <script src="JS/calculations.js"></script>
+    <script src="JS/handleFormSubmission.js"></script>
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        initializeMoneySlider("myRange1", "myRange1Output", "minValue", "maxValue", "numberInput1");
-    });
-    document.addEventListener("DOMContentLoaded", function() {
-        initializeMonthSlider("myRange2", "myRange2Output", "minValueMonth", "maxValueMonth", "numberInputMonth2");
-    });
-    document.addEventListener("DOMContentLoaded", function(){
-         modalOperations("myModal", "myBtn1", "close" );
-    });
-    document.addEventListener("DOMContentLoaded", function() {
-        showRate("rataStambeni-input", "rataStambeni-output");
-    });
-    document.getElementById("stambeniForm").addEventListener("submit", handleFormSubmission);
+        document.addEventListener("DOMContentLoaded", function() {
+            initializeMoneySlider("myRange1", "myRange1Output", "minValue", "maxValue", "numberInput1");
+        });
+        document.addEventListener("DOMContentLoaded", function() {
+            initializeMonthSlider("myRange2", "myRange2Output", "minValueMonth", "maxValueMonth", "numberInputMonth2");
+        });
+        document.addEventListener("DOMContentLoaded", function(){
+            modalOperations("myModal", "myBtn1", "close" );
+        });
+        document.addEventListener("DOMContentLoaded", function() {
+            showRate("rataStambeni-input", "rataStambeni-output");
+        });
+        document.getElementById("stambeniForm").addEventListener("submit", handleFormSubmission);
 </script>
-
 </html>

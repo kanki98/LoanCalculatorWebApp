@@ -29,24 +29,23 @@
     <header class="myheader ">
         <nav class="navbar navbar-expand-sm navbar-dark montserrat-mainFont mycolor-bg mynav-padding mx-auto py-3 ">
             <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="images/loan-vector-icon.jpg" alt="Logo" width="100" height="auto"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav mynav-text">
-                <li class="nav-item mynav-text">
-                    <a class="nav-link" href="index.html"><i class="fa fa-home nav-i"></i>Stambeni kredit</a>
-                </li>    
-                <li class="nav-item">
-                    <a class="nav-link active" href="gotovinski.html"><i class="fa fa-money nav-i"></i>Gotovinski kredit</a>
-                </li>
-                </ul>
-            </div>
+                <a class="navbar-brand" href="#"><img src="images/loan-vector-icon.jpg" alt="Logo" width="100" height="auto"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav mynav-text">
+                    <li class="nav-item mynav-text">
+                        <a class="nav-link" href="index.html"><i class="fa fa-home nav-i"></i>Stambeni kredit</a>
+                    </li>    
+                    <li class="nav-item">
+                        <a class="nav-link active" href="gotovinski.html"><i class="fa fa-money nav-i"></i>Gotovinski kredit</a>
+                    </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
-
     <main class="main-mypadding">
         <h1>Kalkulator gotovinskog kredita</h1>
         <div class="mygrid-container row"> 
@@ -147,16 +146,17 @@
     </main>   
     <footer class="mycolor-bg text-white text-center py-4 montserrat-mainFont">
         <div class="container">
-            <p>&copy; 2024 Karlo Kranjčec, FERIT. Ova stranica je izrađena za potrebe završnog rada.</p>
+            <p>&copy; 2024 Karlo Kranjčec, FERIT. Ova stranica izrađena je za potrebe završnog rada.</p>
         </div>
     </footer>
+</body>
     <script src="JS/sliders.js"></script>
     <script src="JS/fullscreen_overlay.js"></script>
     <script src="JS/showingRates.js"></script>
     <script src="JS/fillModalTable2.js"></script>
     <script src="JS/calculations.js"></script>
     <script src="JS/handleFormSubmission.js"></script>
-    <script>
+<script>
         document.addEventListener("DOMContentLoaded", function() {
             initializeMoneySlider("myRange3", "myRange3Output", "minValue", "maxValue", "numberInput3");
         });
@@ -170,6 +170,5 @@
             showRate("rataGotovinski-input", "rataGotovinski-output");
         });
         document.getElementById("gotovinskiForm").addEventListener("submit", handleFormSubmission2);
-    </script>
-</body>
+</script>
 </html>

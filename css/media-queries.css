@@ -47,6 +47,9 @@
         padding-top: 0.5rem;
         padding-bottom: 0.20rem;
     }
+    .mygrid-container > div, .mygrid-container > form {
+      width: 100%;
+  }
   }
   /* On screens that are 768px wide or less, make the columns stack on top of each other instead of next to each other 
   and make paddings of header and main get extremely reduced so the contents arent pushed on each other*/
@@ -69,6 +72,9 @@
         padding-top: 0.5rem;
         padding-bottom: 0.20rem;
     }
+    .mygrid-container > div, .mygrid-container > form {
+      width: 100%;
+  }
   }
   @media screen and (max-width: 600px) {
     .row {
@@ -110,7 +116,7 @@
     span.width25 {
       font-weight: 500;
     }
-    #minValue {
+    #minValue{
       font-size: small;
     }
     #maxValue {
@@ -124,6 +130,13 @@
     }
     .info-padding {
       font-size: medium;
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
-
+    .width50 {
+      font-size: medium;
+    }
+    .mygrid-container > div, .mygrid-container > form {
+      width: 100%;
+  }
   }
