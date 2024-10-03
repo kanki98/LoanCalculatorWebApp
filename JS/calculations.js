@@ -11,10 +11,10 @@ function izracunajPlanOtplateKredita(kreditPodaci) {
 
     // računamo mjesečni kamatni faktor
     const dekurzivniKamatniFaktorMj = Math.pow(dekurzivniKamatniFaktor, 1/12);
-    
-    const mjesecnaKamatnaStopa = (dekurzivniKamatniFaktorMj - 1) * 100;
-    console.log(mjesecnaKamatnaStopa);
 
+    // računamo mjesečnu kamatnu stopu preko mjesečnog kamatnog faktora
+    const mjesecnaKamatnaStopa = (dekurzivniKamatniFaktorMj - 1) * 100;
+    
     // Izračunavamo anuitet (konstantnu mjesečnu otplatu)
     const anuitetCalculation = 
         glavnica *  (Math.pow(dekurzivniKamatniFaktorMj, rokOtplate) * (dekurzivniKamatniFaktorMj - 1))  / (Math.pow(dekurzivniKamatniFaktorMj, rokOtplate) - 1);
