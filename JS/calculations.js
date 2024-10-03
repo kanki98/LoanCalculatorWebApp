@@ -4,16 +4,20 @@ function izracunajPlanOtplateKredita(kreditPodaci) {
     const godisnjaKamatnaStopa = kreditPodaci.godisnjaKamatnaStopa;
     const rokOtplate = kreditPodaci.rokOtplate;
 
-    // Pretvaramo godišnju kamatnu stopu u mjesečnu
-    const mjesecnaKamatnaStopaNonFixed = godisnjaKamatnaStopa / 12;
+    // zaokružujemo kamatnu stopu na 3 decimale
+    const godisnjaKamatnaStopaFixed = godisnjaKamatnaStopa.toFixed(3);
+     // računamo godišnji dekurzivni kamatni faktor
+    const dekurzivniKamatniFaktor = 1 + (godisnjaKamatnaStopaFixed/100);
 
-    mjesecnaKamatnaStopa = mjesecnaKamatnaStopaNonFixed.toFixed(3);
-     // racunamo dekurzivni kamatni faktor
-    const dekurzivniKamatniFaktor = 1 + (mjesecnaKamatnaStopa/100);
+    // računamo mjesečni kamatni faktor
+    const dekurzivniKamatniFaktorMj = Math.pow(dekurzivniKamatniFaktor, 1/12);
+    
+    const mjesecnaKamatnaStopa = (dekurzivniKamatniFaktorMj - 1) * 100;
+    console.log(mjesecnaKamatnaStopa);
 
     // Izračunavamo anuitet (konstantnu mjesečnu otplatu)
     const anuitetCalculation = 
-        glavnica *  (Math.pow(dekurzivniKamatniFaktor, rokOtplate) * (dekurzivniKamatniFaktor - 1))  / (Math.pow(dekurzivniKamatniFaktor, rokOtplate) - 1);
+        glavnica *  (Math.pow(dekurzivniKamatniFaktorMj, rokOtplate) * (dekurzivniKamatniFaktorMj - 1))  / (Math.pow(dekurzivniKamatniFaktorMj, rokOtplate) - 1);
   
     // Kreiramo niz koji će čuvati detalje svake rate
     const planOtplate = [];
